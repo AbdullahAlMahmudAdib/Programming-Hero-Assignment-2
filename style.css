@@ -1,0 +1,60 @@
+.inter-font {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    }
+
+body{
+    background-color: #1A0B2E;
+    color: #FFFFFF;
+}
+
+.btn-1{
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    padding: 12.5px 16px;
+    display: flex;
+    gap: 4px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10000px;
+    background: linear-gradient(to top right, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+}
+.btn-1:hover{
+    color: black;
+}
+nav a:hover{
+    background-color: #9100f848;
+    padding: 10px;
+    border-radius: 25px;
+}
+.btn-2{
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    padding: 12.5px 20px;
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10000px;
+    background: linear-gradient(to top right, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+}
+.btn-2:hover{
+    color: black;
+}
+.btn-3{
+    font-size: 16px;
+    font-weight: 600;
+    color: #00FF88;
+    padding: 12.5px 20px;
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+    border: 2px solid #00FF88;
+    border-radius: 10000px;
+    background: none;
+}
+.btn-3:hover{
+    background-color: #9100f83a;
+}
