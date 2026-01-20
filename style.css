@@ -1,389 +1,351 @@
-.inter-font {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    }
+/* =========================
+   GLOBAL RESET
+========================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body{
+    font-family: "Inter", sans-serif;
     background-color: #1A0B2E;
     color: #FFFFFF;
 }
 
-.btn-1{
-    font-size: 16px;
-    font-weight: 600;
-    color: #FFFFFF;
-    padding: 12.5px 16px;
-    display: flex;
-    gap: 4px;
-    cursor: pointer;
-    border: none;
-    border-radius: 10000px;
-    background: linear-gradient(to top right, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
-}
-.btn-1:hover{
-    color: black;
-}
-nav a:hover{
-    background-color: #9100f848;
-    padding: 10px;
-    border-radius: 25px;
-}
-.btn-2{
-    font-size: 16px;
-    font-weight: 600;
-    color: #FFFFFF;
-    padding: 12.5px 20px;
-    display: flex;
-    gap: 8px;
-    cursor: pointer;
-    border: none;
-    border-radius: 10000px;
-    background: linear-gradient(to top right, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
-}
-.btn-2:hover{
-    color: black;
-}
-.btn-3{
-    font-size: 16px;
-    font-weight: 600;
-    color: #00FF88;
-    padding: 12.5px 20px;
-    display: flex;
-    gap: 8px;
-    cursor: pointer;
-    border: 2px solid #00FF88;
-    border-radius: 10000px;
-    background: none;
-}
-.btn-3:hover{
-    background-color: #9100f83a;
-}
-.micro{
-    position: absolute;
-    left: 33%;
-    top: 24%;
-    animation: rotateMicro 6s linear infinite;
-}
-
-/* continuous rotation animation */
-@keyframes rotateMicro {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-nav{
-    max-width: 1600px;
-    display: flex;
-    padding: 24px 200px;
-    align-items: center;
-    justify-content: space-around;
-}
-nav>h1{
-    font-weight: 800;
-    line-height: 24px;
-}
-nav .mix-color{
-    background: linear-gradient(to top, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
-    background-clip: text;
+/* =========================
+   COMMON UTILITIES
+========================= */
+.mix-color{
+    background: linear-gradient(45deg,#F7E93F,#FB09B4,#9100F8);
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-nav>ul{
-    display: flex;
-    gap: 32px;
-    list-style: none;
-    text-decoration: none;
-}
-nav>ul>li>a{
-    text-decoration: none;
-    font-size: 16px;
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-1,.btn-2{
+    padding: 12px 20px;
+    border-radius: 999px;
+    border: none;
     font-weight: 600;
-    line-height: 120%;
-    color: #FFFFFF;
+    cursor: pointer;
+    background: linear-gradient(45deg,#F7E93F,#FB09B4,#9100F8);
+    color: #fff;
 }
+
+.btn-3{
+    padding: 12px 20px;
+    border-radius: 999px;
+    border: 2px solid #00FF88;
+    background: none;
+    color: #00FF88;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+nav{
+    max-width: 1600px;
+    margin: auto;
+    padding: 24px 120px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
 .menu{
     display: none;
 }
 
+/* =========================
+   BANNER
+========================= */
 #banner{
-    background-image: url(../hero-bg.png);
-    width: 100%;
-    min-height: 60vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    min-height: 70vh;
+    background: url(hero-bg.png) center/cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-top: 1px solid #331955;
+    text-align: center;
+    padding: 80px 20px;
 }
 
 .criticle{
-    margin-top: 115px;
     position: relative;
-}
-.new{
-    padding: 8px 16px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #1A0B2E;
-    background-color: #00FF88;
-    border: none;
-    border-radius: 1000px;
-    position: absolute;
-    top: 5%;
-    left: 75%;
-}
-#banner h1{
-    font-size: 60px;
-    font-weight: 800;
-    margin-top: 40px;
+    width: 260px;
 }
 
-#banner .paragraph{
-    font-size: 16px;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.74);
-    margin-top: 8px;
+.round{
+    width: 100%;
 }
-.btns{
-    display: flex;
-    gap: 8px;
+
+/* 🔄 ALWAYS SPINNING MICROPHONE */
+.micro{
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 80px;
+    animation: spinMic 8s linear infinite;
+}
+
+@keyframes spinMic{
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(360deg); }
+}
+
+.new{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #00FF88;
+    color: #1A0B2E;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+#banner h1{
+    font-size: 56px;
     margin-top: 24px;
 }
-#About{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+
+#banner p{
+    opacity: 0.7;
+    margin-top: 8px;
 }
+
+.btns{
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+#About{
+    text-align: center;
+    padding: 120px 20px;
+}
+
 #About h2{
     font-size: 48px;
-    font-weight: 700;
-    margin-top: 50px;
 }
-#About .about-p{
-    font-size: 16px;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.74);
+
+.about-p{
+    opacity: .7;
     margin-top: 8px;
-    padding-bottom: 80px;
-    border-bottom: 1px solid #331955;
 }
-#About .card-section-1{
+
+.card-section-1{
+    margin-top: 60px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 80px;
-    align-items: center;
-    justify-content: center;
-    margin-top: 80px;
-    margin-bottom: 120px;
+    grid-template-columns: repeat(4,1fr);
+    gap: 40px;
 }
-#About .card-section-1 h1{
-    font-size: 48px;
-    font-weight: black;
+
+.card-section-1 h1{
     color: #00FF88;
-    margin-bottom: 16px;
-}
-#About .card-section-1 .star-card{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 2px;
-
-}
-#About .card-section-1 h1 span{
-    font-size: 30px;
-}
-#About .card-section-1 p{
-    font-size: 16px;
-    line-height: 20px;
-    color: rgba(255, 255, 255, 0.74);
-}
-
-/* chose section */
-#choose{
-    /* border: 1px solid red; */
-    /* padding: 120px 200px; */
-    padding-top: 120px;
-    background-color: #230E3D;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-#choose h2{
     font-size: 48px;
-    font-weight: 700;
+}
 
+/* =========================
+   WHY CHOOSE TECHWAVE
+========================= */
+#why{
+    padding: 120px 20px;
+    background: #230E3D;
+    text-align: center;
 }
-.card-section-2{
-    /* border: 1px solid green; */
+
+#why h2{
+    font-size: 48px;
+    margin-bottom: 48px;
+}
+
+.why-grid{
     max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 40px;
+    margin: auto;
     display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    padding-bottom: 120px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
 }
-.card-section-2 .card{
-    background-color: rgba(53, 17, 101, 0.4);
-    border-radius: 40px;
-    padding: 40px;
-    align-content: center;
+
+.why-card{
+    background: rgba(53,17,101,.5);
+    border-radius: 28px;
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     text-align: left;
 }
-.card-section-2 .card h3{
+
+.why-card .icon{
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: linear-gradient(45deg,#F7E93F,#FB09B4,#9100F8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 24px;
-    font-weight: 700;
-    margin: 16px auto;
-}
-.card-section-2 .card p{
-    font-size: 16px;
-    line-height: 24px;
-    color: rgba(255, 255, 255, 0.74);
-}
-.card-1{
-    /* border: 1px solid red; */
-    grid-row: span 2;
-}
-.card-2{
-    /* border: 1px solid red; */
-    grid-column: span 2;
-    grid-row: span 1;
-}
-.card-3{
-    /* border: 1px solid red; */
-    grid-column: span 2;
-}
-.card-4{
-    /* border: 1px solid red; */
-    grid-column: span 2;
-}
-.card-5{
-    /* border: 1px solid red; */
-    grid-column: span 1;
 }
 
-/* featured */
+.why-card h3{
+    font-size: 20px;
+}
+
+.why-card p{
+    font-size: 15px;
+    opacity: .7;
+    line-height: 22px;
+}
+
+.why-card.large{
+    grid-row: span 2;
+}
+
+.why-card.wide{
+    grid-column: span 2;
+}
+
+/* =========================
+   FEATURED EPISODES
+========================= */
 #featured{
     max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 120px;
+    margin: 120px auto;
     text-align: center;
 }
-#featured h1{
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 40px;
-}
+
 .card-video-container{
     display: flex;
-    gap: 30px;
+    gap: 24px;
 }
-.card-video-container .card-video{
-    /* border: 1px solid red  ; */
-}
-.card-video-container .card-video iframe{
-    width: 380px;
-    height: 214px;
-    /* border-radius: 1000px; */
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
+
+iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 20px 20px 0 0;
 }
 
 .card-card{
-    margin-top: -4px;
-    padding: 24px;
-    align-items: center;
-    text-align: left;
-    background-color: #250D44;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-.card-card h3{
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-.card-card p{
-    font-size: 16px;
-    line-height: 24px;
-    color: rgba(255, 255, 255, 0.664);
-    margin-bottom: 12px;
-}
-.card-card .watch{
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 600;
-    color: #00FF88;
+    background: #250D44;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
 }
 
-/* Host section */
+/* =========================
+   HOST
+========================= */
 #host{
     max-width: 1200px;
     margin: 120px auto;
-    align-items: center;
-    justify-content: center;
     text-align: center;
 }
-#host h1{
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 40px;
-}
-#host .kumar-box{
-    padding: 40px;
+
+.kumar-box{
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 40px;
-    background-color: rgba(53, 17, 101, 0.4);
-    border-radius: 40px;
-    border: none;
+    padding: 40px;
+    background: rgba(53,17,101,.5);
+    border-radius: 32px;
+    align-items: center;
 }
-#host .kumar{
-    text-align: left;
+
+/* =========================
+   FOOTER
+========================= */
+#footer{
+    background: url(footer-bg.png) center/cover no-repeat;
+    padding: 120px 20px;
+    text-align: center;
 }
-#host .kumar h2{
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 16px;
-}
-#host .kumar p{
-    font-size: 16px;
-    line-height: 24px;
-    color: rgba(255, 255, 255, 0.664);
-    margin-bottom: 12px;
-}
-#host .kumar ul{
+
+#footer ul{
     list-style: none;
     display: flex;
-    gap: 8px;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 24px;
 }
-#host .kumar ul li{
-    width: 40px;
-    height: 40px;
-    border: 1px solid #533C72;
-    border-radius: 50%;
-    padding: 12.5px;
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px){
+    .why-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .why-card.large,
+    .why-card.wide{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
 }
-#host .kumar ul .logo-1{
-   padding-left: 11px;
-   padding-top: 10px;
-}
-#host .kumar ul .logo-2{
-   padding-left: 12px;
-}
-#host .kumar ul .logo-3{
-   padding-left: 10px;
-   padding-top: 10px;
-}
-#host .kumar ul .logo-4{
-   padding-left: 9px;
-   padding-top: 9px;
+
+@media (max-width: 576px){
+    nav{
+        grid-template-columns: auto auto;
+        padding: 16px 20px;
+    }
+
+    nav ul,
+    .btn-1{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    #banner h1{
+        font-size: 36px;
+    }
+
+    .btns{
+        flex-direction: column;
+    }
+
+    .card-section-1{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .why-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .why-card{
+        align-items: center;
+        text-align: center;
+    }
+
+    .card-video-container{
+        flex-direction: column;
+    }
+
+    .kumar-box{
+        flex-direction: column;
+        text-align: center;
+    }
 }
