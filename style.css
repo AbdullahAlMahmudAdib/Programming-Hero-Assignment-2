@@ -154,3 +154,236 @@ nav>ul>li>a{
     gap: 8px;
     margin-top: 24px;
 }
+#About{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#About h2{
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 50px;
+}
+#About .about-p{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.74);
+    margin-top: 8px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid #331955;
+}
+#About .card-section-1{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 120px;
+}
+#About .card-section-1 h1{
+    font-size: 48px;
+    font-weight: black;
+    color: #00FF88;
+    margin-bottom: 16px;
+}
+#About .card-section-1 .star-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2px;
+
+}
+#About .card-section-1 h1 span{
+    font-size: 30px;
+}
+#About .card-section-1 p{
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.74);
+}
+
+/* chose section */
+#choose{
+    /* border: 1px solid red; */
+    /* padding: 120px 200px; */
+    padding-top: 120px;
+    background-color: #230E3D;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#choose h2{
+    font-size: 48px;
+    font-weight: 700;
+
+}
+.card-section-2{
+    /* border: 1px solid green; */
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding-bottom: 120px;
+}
+.card-section-2 .card{
+    background-color: rgba(53, 17, 101, 0.4);
+    border-radius: 40px;
+    padding: 40px;
+    align-content: center;
+    text-align: left;
+}
+.card-section-2 .card h3{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 16px auto;
+}
+.card-section-2 .card p{
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.74);
+}
+.card-1{
+    /* border: 1px solid red; */
+    grid-row: span 2;
+}
+.card-2{
+    /* border: 1px solid red; */
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.card-3{
+    /* border: 1px solid red; */
+    grid-column: span 2;
+}
+.card-4{
+    /* border: 1px solid red; */
+    grid-column: span 2;
+}
+.card-5{
+    /* border: 1px solid red; */
+    grid-column: span 1;
+}
+
+/* featured */
+#featured{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 120px;
+    text-align: center;
+}
+#featured h1{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.card-video-container{
+    display: flex;
+    gap: 30px;
+}
+.card-video-container .card-video{
+    /* border: 1px solid red  ; */
+}
+.card-video-container .card-video iframe{
+    width: 380px;
+    height: 214px;
+    /* border-radius: 1000px; */
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.card-card{
+    margin-top: -4px;
+    padding: 24px;
+    align-items: center;
+    text-align: left;
+    background-color: #250D44;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.card-card h3{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.card-card p{
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.664);
+    margin-bottom: 12px;
+}
+.card-card .watch{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #00FF88;
+}
+
+/* Host section */
+#host{
+    max-width: 1200px;
+    margin: 120px auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#host h1{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+#host .kumar-box{
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: rgba(53, 17, 101, 0.4);
+    border-radius: 40px;
+    border: none;
+}
+#host .kumar{
+    text-align: left;
+}
+#host .kumar h2{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+#host .kumar p{
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.664);
+    margin-bottom: 12px;
+}
+#host .kumar ul{
+    list-style: none;
+    display: flex;
+    gap: 8px;
+}
+#host .kumar ul li{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #533C72;
+    border-radius: 50%;
+    padding: 12.5px;
+}
+#host .kumar ul .logo-1{
+   padding-left: 11px;
+   padding-top: 10px;
+}
+#host .kumar ul .logo-2{
+   padding-left: 12px;
+}
+#host .kumar ul .logo-3{
+   padding-left: 10px;
+   padding-top: 10px;
+}
+#host .kumar ul .logo-4{
+   padding-left: 9px;
+   padding-top: 9px;
+}
