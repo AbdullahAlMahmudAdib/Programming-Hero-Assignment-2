@@ -1,0 +1,619 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.inter-font {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    }
+
+body{
+    background-color: #1A0B2E;
+    color: #FFFFFF;
+}
+
+.btn-1{
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    padding: 12.5px 16px;
+    display: flex;
+    gap: 4px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10000px;
+    background: linear-gradient(to top right, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+}
+.btn-1:hover{
+    color: black;
+}
+nav a:hover{
+    background-color: #9100f848;
+    padding: 10px;
+    border-radius: 25px;
+}
+.btn-2{
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    padding: 12.5px 20px;
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10000px;
+    background: linear-gradient(to top right, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+}
+.btn-2:hover{
+    color: black;
+}
+.btn-3{
+    font-size: 16px;
+    font-weight: 600;
+    color: #00FF88;
+    padding: 12.5px 20px;
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+    border: 2px solid #00FF88;
+    border-radius: 10000px;
+    background: none;
+}
+.btn-3:hover{
+    background-color: #9100f83a;
+}
+
+.micro:hover{
+    transform: rotate(360deg) scale(1);
+    transition: transform 2s ease-out 0.5s;
+} 
+nav{
+    max-width: 1600px;
+    display: flex;
+    padding: 24px 200px;
+    align-items: center;
+    justify-content: space-around;
+}
+nav>h1{
+    font-weight: 800;
+    line-height: 24px;
+}
+nav .mix-color{
+    background: linear-gradient(to top, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+nav>ul{
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    text-decoration: none;
+}
+nav>ul>li>a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+.menu{
+    display: none;
+}
+
+/* Banner */
+
+#banner{
+    background-image: url(../hero-bg.png);
+    width: 100%;
+    min-height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #331955;
+}
+
+.criticle{
+    margin-top: 115px;
+    position: relative;
+}
+
+.micro{
+    position: absolute;
+    left: 33%;
+    top: 24%;
+}
+.new{
+    padding: 8px 16px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1A0B2E;
+    background-color: #00FF88;
+    border: none;
+    border-radius: 1000px;
+    position: absolute;
+    top: 5%;
+    left: 75%;
+}
+#banner h1{
+    font-size: 60px;
+    font-weight: 800;
+    margin-top: 40px;
+}
+
+#banner .paragraph{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.74);
+    margin-top: 8px;
+}
+.btns{
+    display: flex;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+/* About section */
+
+#About{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#About h2{
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 50px;
+}
+#About .about-p{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.74);
+    margin-top: 8px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid #331955;
+}
+#About .card-section-1{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 120px;
+}
+#About .card-section-1 h1{
+    font-size: 48px;
+    font-weight: black;
+    color: #00FF88;
+    margin-bottom: 16px;
+}
+#About .card-section-1 .star-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2px;
+
+}
+#About .card-section-1 h1 span{
+    font-size: 30px;
+}
+#About .card-section-1 p{
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.74);
+}
+
+/* chose section */
+#choose{
+    /* border: 1px solid red; */
+    /* padding: 120px 200px; */
+    padding-top: 120px;
+    background-color: #230E3D;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#choose h2{
+    font-size: 48px;
+    font-weight: 700;
+
+}
+.card-section-2{
+    /* border: 1px solid green; */
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding-bottom: 120px;
+}
+.card-section-2 .card{
+    background-color: rgba(53, 17, 101, 0.4);
+    border-radius: 40px;
+    padding: 40px;
+    align-content: center;
+    text-align: left;
+}
+.card-section-2 .card h3{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 16px auto;
+}
+.card-section-2 .card p{
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.74);
+}
+.card-1{
+    /* border: 1px solid red; */
+    grid-row: span 2;
+}
+.card-2{
+    /* border: 1px solid red; */
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.card-3{
+    /* border: 1px solid red; */
+    grid-column: span 2;
+}
+.card-4{
+    /* border: 1px solid red; */
+    grid-column: span 2;
+}
+.card-5{
+    /* border: 1px solid red; */
+    grid-column: span 1;
+}
+
+/* featured */
+#featured{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 120px;
+    text-align: center;
+}
+#featured h1{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.card-video-container{
+    display: flex;
+    gap: 30px;
+}
+.card-video-container .card-video{
+    /* border: 1px solid red  ; */
+}
+.card-video-container .card-video iframe{
+    width: 380px;
+    height: 214px;
+    /* border-radius: 1000px; */
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.card-card{
+    margin-top: -4px;
+    padding: 24px;
+    align-items: center;
+    text-align: left;
+    background-color: #250D44;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.card-card h3{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.card-card p{
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.664);
+    margin-bottom: 12px;
+}
+.card-card .watch{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #00FF88;
+}
+
+/* Host section */
+#host{
+    max-width: 1200px;
+    margin: 120px auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#host h1{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+#host .kumar-box{
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: rgba(53, 17, 101, 0.4);
+    border-radius: 40px;
+    border: none;
+}
+#host .kumar{
+    text-align: left;
+}
+#host .kumar h2{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+#host .kumar p{
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.664);
+    margin-bottom: 12px;
+}
+#host .kumar ul{
+    list-style: none;
+    display: flex;
+    gap: 8px;
+}
+#host .kumar ul li{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #533C72;
+    border-radius: 50%;
+    padding: 12.5px;
+}
+#host .kumar ul .logo-1{
+   padding-left: 11px;
+   padding-top: 10px;
+}
+#host .kumar ul .logo-2{
+   padding-left: 12px;
+}
+#host .kumar ul .logo-3{
+   padding-left: 10px;
+   padding-top: 10px;
+}
+#host .kumar ul .logo-4{
+   padding-left: 9px;
+   padding-top: 9px;
+}
+
+/* footer section */
+
+#footer{
+    background-image: url(../footer-bg.png);
+    width: 100%;
+    min-height: 412px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border-top: 1px solid #331955; */
+}
+#footer h1{
+    font-size: 70px;
+    font-weight: 900;
+    margin-top: 120px;
+    margin-bottom: 32px;
+}
+#footer .mix-color{
+    background: linear-gradient(to top, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#footer ul{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+#footer ul li{
+    display: flex;
+    gap: 8px;
+}
+#footer ul li span{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.664);
+}
+#footer p{
+    color: rgba(255, 255, 255, 0.664);
+    margin-top: 32px;
+}
+
+
+
+
+@media screen and (max-width: 576px) {
+    nav{
+        padding: 18px 20px;
+        justify-content: space-between;
+    }
+    nav>ul{
+        display: none;
+    }
+    nav>.btn-1{
+        display: none;
+    }
+    .menu{
+        display: inline;
+    }
+    #banner{
+        background-size: 575px;
+        min-width: 575px;
+        height: 35vh;
+        /* border: 1px solid red; */
+    }
+    .criticle .round{
+        margin-top: -70px;
+        width: 60vw;
+        max-width: 250px;
+        min-width: 120px;
+    }
+    .micro{
+        position: absolute;
+        left: 35%;
+        top: 0%;
+        max-width: 80px;
+    }
+    .new{
+        font-size: 16px;
+        top: -35%;
+        left: 67%;
+    }
+    #banner h1{
+        font-size: 40px;
+        font-weight: 800;
+        margin-top: 24px;
+    }
+    #banner .paragraph{
+        max-width: 400px;
+        text-align: center;
+    }
+
+    #banner .btns{
+        margin-bottom: 40px;
+    }
+
+    #About{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 20px;
+        margin-top: 80px;
+        max-width: 576px;        
+    }
+    #About h2{
+        font-size: 32px;
+        font-weight: 700;
+        margin-top: 50px;
+    }
+    #About .about-p{
+        font-size: 16px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.74);
+        margin-top: 8px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #331955;
+    }
+    #About .card-section-1{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    #About .card-section-1 h1{
+        font-size: 40px;
+    }
+
+    #About .card-section-1 h1 span{
+        font-size: 25px;
+    }
+    #choose{
+        padding-top: 40px;
+    }
+    #choose h2{
+        font-size: 32px;
+    }
+    .card-section-2{
+        /* border: 1px solid green; */
+        max-width: 500px;
+        margin: 0 auto;
+        margin-top: 16px;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(1, 1fr);
+        padding-bottom: 40px;
+    }
+    .card{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .card-4{
+        grid-row: span 2;
+    }
+    .card-section-2 .card{
+        padding: 20px;
+    }
+    .card-section-2 .card h3{
+        font-size: 22px;
+    }
+    #featured{
+        /* border: 1px solid red; */
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 40px;
+        justify-content: center;
+    }
+    #featured h1{
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+    .card-video-container{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .card-video-container .card-video iframe{
+        width: 400px;
+        height: 225px;
+    }
+
+    .card-card{
+        padding: 16px;
+    }
+    .card-card h3{
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+    .card-card p{
+        margin-bottom: 8px;
+    }
+    #host{
+        max-width: 400px;
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+    #host h1{
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+    #host .kumar-box{
+        padding: 24px;
+        flex-direction: column;
+        gap: 16px;
+        border-radius: 20px;
+        border: none;
+    }
+    #host .kumar{
+        text-align: center;
+    }
+
+    #host .kumar p{
+        margin-bottom: 16px;
+    }
+    #host .kumar ul{
+        justify-content: center;
+    }
+
+}
